@@ -1,0 +1,9 @@
+Seed,Day,Strategy,Distance_km,Fuel_Liters,CO2_kg,Utilization_pct,Bins_Collected,Unnecessary_Collections,Mean_Fill_at_Collection,Overflow_Events,Overflow_Bin_Hours,Total_Bin_Hours
+0,0,Fixed,156.37,46.91,125.72,61.3,34,0,50.0,60,491,2400
+0,0,Reactive,0.0,0.0,0.0,0.0,0,0,0.0,85,681,2400
+0,0,Predictive,171.94,51.58,138.23,86.5,48,0,50.0,44,312,2400
+0,0,Full EcoBin,171.94,51.58,138.23,86.5,48,0,50.0,45,312,2400
+0,1,Fixed,179.69,53.91,144.48,83.6,33,0,98.81229316979318,20,952,2400
+0,1,Reactive,0.0,0.0,0.0,0.0,0,0,0.0,8,2227,2400
+0,1,Predictive,233.26,69.98,187.55,88.5,60,0,90.14413739041949,27,227,2400
+0,1,Full EcoBin,226.4,67.92,182.03,87.6,59,0,90.71723014427741,27,235,2400

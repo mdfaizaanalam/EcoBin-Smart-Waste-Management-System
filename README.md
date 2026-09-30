@@ -388,7 +388,7 @@ Environmental audit dashboard calculating Scope 1/2 GHG reductions, fuel conserv
 ![Carbon ROI Metrics](assets/screenshots/Carbon%20ROI%20metrices.png)
 
 #### 28. Certified Municipal ROI & ESG Environmental Audit Report
-![Municipal ROI and ESG Audit Report](assets/screenshots/Ecobin%20municipal%20ROI%20%26%20ESG%20audit%20report.png)
+![Municipal ROI and ESG Audit Report](assets/screenshots/Ecobin%20municipal%20ROI%20&%20ESG%20audit%20report.png)
 
 ---
 
