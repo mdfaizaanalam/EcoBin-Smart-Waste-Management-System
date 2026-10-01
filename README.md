@@ -498,14 +498,14 @@ Smart bins deployed across urban environments face harsh conditions (heat, monso
 EcoBin connects the **Municipal Administrator**, **Sanitation Driver**, **Field Technician**, and **Citizen** into a single real-time feedback loop:
 
 ```
-                                 ┌───────────────────────────┐
-                                 │   CITIZEN / CIVIC HUB     │
-                                 │ • Reports Garbage Spot    │
-                                 │ • Segregates at Smart Bin │
-                                 │ • Earns EcoReward Points  │
-                                 └────────────┬──────────────┘
-                                              │ (Waste Ingestion / Report)
-                                              ▼
+                           ┌───────────────────────────┐
+                           │   CITIZEN / CIVIC HUB     │
+                           │ • Reports Garbage Spot    │
+                           │ • Segregates at Smart Bin │
+                           │ • Earns EcoReward Points  │
+                           └────────────┬──────────────┘
+                                        │ (Waste Ingestion / Report)
+                                        ▼
  ┌─────────────────────────────┐    WebSocket    ┌───────────────────────────┐
  │  PHYSICAL IOT EDGE NODE     │ <=============> │  CENTRAL FASTAPI ENGINE   │ 
  │ • JSN-SR04T Depth Telemetry │ (JSON Ingestion │ • XGBoost 24h Forecasting │
