@@ -498,40 +498,40 @@ Smart bins deployed across urban environments face harsh conditions (heat, monso
 EcoBin connects the **Municipal Administrator**, **Sanitation Driver**, **Field Technician**, and **Citizen** into a single real-time feedback loop:
 
 ```
-                                 ┌──────────────────────────┐
-                                 │   CITIZEN / CIVIC HUB    │
-                                 │ • Reports Garbage Spot   │
-                                 │ • Segregates at Smart Bin│
-                                 │ • Earns EcoReward Points │
-                                 └────────────┬─────────────┘
+                                 ┌───────────────────────────┐
+                                 │   CITIZEN / CIVIC HUB     │
+                                 │ • Reports Garbage Spot    │
+                                 │ • Segregates at Smart Bin │
+                                 │ • Earns EcoReward Points  │
+                                 └────────────┬──────────────┘
                                               │ (Waste Ingestion / Report)
                                               ▼
- ┌──────────────────────────┐    WebSocket    ┌──────────────────────────┐
- │  PHYSICAL IOT EDGE NODE  │ <=============> │  CENTRAL FASTAPI ENGINE  │
- │ • JSN-SR04T Depth Telemetry│ (JSON Ingestion│ • XGBoost 24h Forecasting│
- │ • DHT22 Microclimate Read │  <15ms Latency)│ • Google OR-Tools CVRP   │
- │ • TP4056 Solar Harvest   │                │ • SQLAlchemy Multi-City  │
- └─────────────┬────────────┘                └────────────┬─────────────┘
-               │                                          │
-    Anomaly /  │                                          │ Real-Time Route
-    Low Battery│                                          │ & Work Orders
-               ▼                                          ▼
- ┌──────────────────────────┐                ┌──────────────────────────┐
- │ FIELD TECHNICIAN (/mnt)  │                │ SANITATION DRIVER (/drv) │
- │ • Instant Fault Alert    │                │ • Dynamic GPS Turn-by-Turn│
- │ • On-Site Sensor Repair  │                │ • QR Scan Pickup Audit   │
- │ • Re-Calibrate IoT Node  │                │ • Bin Fill Zeroed to 0%  │
- └─────────────┬────────────┘                └────────────┬─────────────┘
+ ┌─────────────────────────────┐    WebSocket    ┌───────────────────────────┐
+ │  PHYSICAL IOT EDGE NODE     │ <=============> │  CENTRAL FASTAPI ENGINE   │ 
+ │ • JSN-SR04T Depth Telemetry │ (JSON Ingestion │ • XGBoost 24h Forecasting │
+ │ • DHT22 Microclimate Read   │  <15ms Latency) │ • Google OR-Tools CVRP    │
+ │ • TP4056 Solar Harvest      │                 │ • SQLAlchemy Multi-City   │
+ └─────────────┬───────────────┘                 └────────────┬──────────────┘
+               │                                              │
+    Anomaly /  │                                              │ Real-Time Route
+    Low Battery│                                              │ & Work Orders
+               ▼                                              ▼
+ ┌──────────────────────────┐                ┌────────────────────────────┐
+ │ FIELD TECHNICIAN (/mnt)  │                │ SANITATION DRIVER (/drv)   │
+ │ • Instant Fault Alert    │                │ • Dynamic GPS Turn-by-Turn │
+ │ • On-Site Sensor Repair  │                │ • QR Scan Pickup Audit     │
+ │ • Re-Calibrate IoT Node  │                │ • Bin Fill Zeroed to 0%    │
+ └─────────────┬────────────┘                └────────────┬───────────────┘
                │                                          │
                └───────────────────┬──────────────────────┘
                                    │ Real-time Telemetry & KPIs
                                    ▼
-                    ┌────────────────────────────┐
-                    │ ADMIN COMMAND CENTER (/)   │
-                    │ • 16 Interactive Modules   │
-                    │ • Multi-City GIS Telemetry │
-                    │ • Certified ESG & ROI Audit│
-                    └────────────────────────────┘
+                    ┌─────────────────────────────┐
+                    │ ADMIN COMMAND CENTER (/)    │
+                    │ • 16 Interactive Modules    │
+                    │ • Multi-City GIS Telemetry  │
+                    │ • Certified ESG & ROI Audit │
+                    └─────────────────────────────┘
 ```
 
 ### 🕒 A Real-World Operational Scenario: An End-to-End Cycle
